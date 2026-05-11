@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    android:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvTicketHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-TICKET"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:letterSpacing="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAirlines"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/viewDividerTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/ivAirlines" />
+
+        <!-- Passenger Section -->
+        <TextView
+            android:id="@+id/tvLabelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="PASSENGER"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerTop"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvTicketClass" />
+
+        <TextView
+            android:id="@+id/tvLabelContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="CONTACT INFO"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email@example.com"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelContact"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+62 812-3456-789"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketEmail"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Trip Section -->
+        <TextView
+            android:id="@+id/tvLabelDest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="DESTINATION"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketPhone"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bali - Beach Tour"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelDest" />
+
+        <TextView
+            android:id="@+id/tvLabelDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="DATE"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketDestination"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-May-2026"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelDate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabelClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLASS"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toTopOf="@id/tvLabelName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXECUTIVE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelClass"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabelServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="SERVICES"
+            android:textSize="10sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketDate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTicketServices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Insurance, Pickup"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelServices"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Mock QR Code Section -->
+        <View
+            android:id="@+id/viewDividerBottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketServices" />
+
+        <LinearLayout
+            android:id="@+id/llQRCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerBottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_qr_code"
+                android:background="@drawable/qr_background"
+                android:padding="12dp"
+                android:contentDescription="Boarding QR Code"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="SCAN FOR BOARDING"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:textColor="?android:attr/textColorSecondary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

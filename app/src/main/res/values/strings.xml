@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">MyTravel</string>
+    <string name="customer_name">Full Name</string>
+    <string name="customer_email">Email Address</string>
+    <string name="customer_phone">Phone Number</string>
+    <string name="destination_prompt">Select Destination</string>
+    <string name="ticket_class">Ticket Class</string>
+    <string name="class_economy">Economy</string>
+    <string name="class_executive">Executive</string>
+    <string name="class_vip">VIP</string>
+    <string name="additional_services">Additional Services</string>
+    <string name="service_insurance">Travel Insurance</string>
+    <string name="service_pickup">Hotel Pickup</string>
+    <string name="service_photo">Photo Documentation</string>
+    <string name="agreement">I agree to the terms &amp; conditions</string>
+    <string name="book_button">Book Ticket</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="select_date">Select Date</string>
+
+    <string name="error_empty_fields">Please fill in all fields!</string>
+    <string name="error_empty_name">Please enter passenger name!</string>
+    <string name="error_empty_email">Please enter email address!</string>
+    <string name="error_empty_phone">Please enter phone number!</string>
+    <string name="error_empty_date">Please select departure date!</string>
+    <string name="error_empty_destination">Please select destination!</string>
+    <string name="error_invalid_email">Invalid email format!</string>
+    <string name="error_no_class">Please select a ticket class!</string>
+    <string name="error_no_agreement">You must agree to the terms!</string>
+
+    <string name="contact_agent">Contact Agent</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="share_ticket">Share Ticket</string>
+    <string name="download_pdf">Download PDF</string>
+    <string name="ticket_header">E-Ticket Summary</string>
+
+    <string name="login_title">Login to MyTravel</string>
+    <string name="register_title">Create Account</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="no_account">Don\'t have an account? Register here</string>
+    <string name="already_have_account">Already have an account? Login here</string>
+    <string name="error_invalid_login">Invalid username or password!</string>
+    <string name="success_register">Registration successful! Please login.</string>
+    <string name="error_user_exists">Username already exists!</string>
+
+    <string name="dashboard_title">Dashboard</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_my_tickets">My Tickets</string>
+    <string name="menu_explore">Explore</string>
+    <string name="section_ordered">Ordered Tickets</string>
+    <string name="section_unpaid">Unpaid Tickets</string>
+    <string name="available_travel_title">Available Travel</string>
+    <string name="booking_fab_desc">Book new ticket</string>
+
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_password_title">Reset Password</string>
+    <string name="reset_button">Send Reset Request</string>
+    <string name="error_user_not_found">Username not found!</string>
+    <string name="email_reset_subject">Password Reset Request - %1$s</string>
+    <string name="email_reset_body">I would like to reset my password for account: %1$s.\nMy registered email is: %2$s.\n\nYour Verification Code is: %3$s</string>
+    <string name="verify_code_title">Verify Code</string>
+    <string name="code_hint">4-Digit Code</string>
+    <string name="verify_button">Verify Code</string>
+    <string name="error_invalid_code">Invalid verification code!</string>
+    <string name="reset_new_password_title">Enter New Password</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="update_password_button">Update Password</string>
+    <string name="error_password_mismatch">Passwords do not match!</string>
+    <string name="success_password_updated">Password updated successfully! Please login.</string>
+    <string name="logout">Logout</string>
+    <string name="menu_profile">Edit Profile</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_theme">Change Theme</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="section_passenger">Passenger Information</string>
+    <string name="section_trip">Trip Details</string>
+    <string name="no_tickets">No Tickets</string>
+    <string name="success_profile_updated">Profile updated successfully!</string>
+</resources>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">MyTravel</string>
+    <string name="customer_name">Nama Lengkap</string>
+    <string name="customer_email">Alamat Email</string>
+    <string name="customer_phone">Nomor Telepon</string>
+    <string name="destination_prompt">Pilih Destinasi</string>
+    <string name="ticket_class">Kelas Tiket</string>
+    <string name="class_economy">Ekonomi</string>
+    <string name="class_executive">Eksekutif</string>
+    <string name="class_vip">VIP</string>
+    <string name="additional_services">Layanan Tambahan</string>
+    <string name="service_insurance">Asuransi Perjalanan</string>
+    <string name="service_pickup">Antar Jemput Hotel</string>
+    <string name="service_photo">Dokumentasi Foto</string>
+    <string name="agreement">Saya setuju dengan syarat &amp; ketentuan</string>
+    <string name="book_button">Pesan Tiket</string>
+    <string name="departure_date">Tanggal Keberangkatan</string>
+    <string name="select_date">Pilih Tanggal</string>
+
+    <string name="error_empty_fields">Harap isi semua bidang!</string>
+    <string name="error_empty_name">Silakan masukkan nama penumpang!</string>
+    <string name="error_empty_email">Silakan masukkan alamat email!</string>
+    <string name="error_empty_phone">Silakan masukkan nomor telepon!</string>
+    <string name="error_empty_date">Silakan pilih tanggal keberangkatan!</string>
+    <string name="error_empty_destination">Silakan pilih destinasi!</string>
+    <string name="error_invalid_email">Format email tidak valid!</string>
+    <string name="error_no_class">Silakan pilih kelas tiket!</string>
+    <string name="error_no_agreement">Anda harus menyetujui ketentuan!</string>
+
+    <string name="contact_agent">Hubungi Agen</string>
+    <string name="visit_website">Kunjungi Situs Web</string>
+    <string name="share_ticket">Bagikan Tiket</string>
+    <string name="download_pdf">Unduh PDF</string>
+    <string name="ticket_header">Ringkasan E-Tiket</string>
+
+    <string name="login_title">Masuk ke MyTravel</string>
+    <string name="register_title">Buat Akun</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Kata Sandi</string>
+    <string name="login_button">Masuk</string>
+    <string name="register_button">Daftar</string>
+    <string name="no_account">Belum punya akun? Daftar di sini</string>
+    <string name="already_have_account">Sudah punya akun? Masuk di sini</string>
+    <string name="error_invalid_login">Username atau kata sandi salah!</string>
+    <string name="success_register">Pendaftaran berhasil! Silakan masuk.</string>
+    <string name="error_user_exists">Username sudah ada!</string>
+
+    <string name="dashboard_title">Dashboard</string>
+    <string name="menu_home">Beranda</string>
+    <string name="menu_my_tickets">Tiket Saya</string>
+    <string name="menu_explore">Jelajahi</string>
+    <string name="section_ordered">Tiket Dipesan</string>
+    <string name="section_unpaid">Tiket Belum Dibayar</string>
+    <string name="available_travel_title">Perjalanan Tersedia</string>
+    <string name="booking_fab_desc">Pesan tiket baru</string>
+
+    <string name="forgot_password">Lupa Kata Sandi?</string>
+    <string name="reset_password_title">Atur Ulang Kata Sandi</string>
+    <string name="reset_button">Kirim Permintaan Reset</string>
+    <string name="error_user_not_found">Username tidak ditemukan!</string>
+    <string name="email_reset_subject">Permintaan Atur Ulang Kata Sandi - %1$s</string>
+    <string name="email_reset_body">Saya ingin mengatur ulang kata sandi untuk akun: %1$s.\nEmail terdaftar saya adalah: %2$s.\n\nKode Verifikasi Anda adalah: %3$s</string>
+    <string name="verify_code_title">Verifikasi Kode</string>
+    <string name="code_hint">Kode 4-Digit</string>
+    <string name="verify_button">Verifikasi Kode</string>
+    <string name="error_invalid_code">Kode verifikasi salah!</string>
+    <string name="reset_new_password_title">Masukkan Kata Sandi Baru</string>
+    <string name="new_password_hint">Kata Sandi Baru</string>
+    <string name="confirm_password_hint">Konfirmasi Kata Sandi</string>
+    <string name="update_password_button">Perbarui Kata Sandi</string>
+    <string name="error_password_mismatch">Kata sandi tidak cocok!</string>
+    <string name="success_password_updated">Kata sandi berhasil diperbarui! Silakan masuk.</string>
+    <string name="logout">Keluar</string>
+    <string name="menu_profile">Edit Profil</string>
+    <string name="menu_language">Bahasa</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="menu_theme">Ganti Tema</string>
+    <string name="save_changes">Simpan Perubahan</string>
+    <string name="success_profile_updated">Profil berhasil diperbarui!</string>
+
+    <string name="section_passenger">Informasi Penumpang</string>
+    <string name="section_trip">Detail Perjalanan</string>
+    <string name="no_tickets">Tidak Ada Tiket</string>
+</resources>
