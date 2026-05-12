@@ -1,4 +1,7 @@
 # MyTravel Android Application
+# Anggota Kelompok 
+- Anandito Daffa Prianto - 2212501536
+- Dicky Wahyu Artanto - 241250057
 
 MyTravel is a comprehensive travel booking and management application for Android. It allows users to browse available travel destinations, book tickets, manage their profile, and keep track of their e-tickets in a single place.
 
