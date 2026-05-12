@@ -27,6 +27,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".SettingsActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -190,32 +190,35 @@
             android:id="@+id/llQRCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/viewDividerBottom"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:id="@+id/ivQRCode"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/ic_qr_code"
                 android:background="@drawable/qr_background"
                 android:padding="12dp"
+                android:elevation="2dp"
                 android:contentDescription="Boarding QR Code"
                 app:tint="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:text="SCAN FOR BOARDING"
-                android:textSize="11sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
-                android:letterSpacing="0.1"
+                android:letterSpacing="0.15"
                 android:textColor="?android:attr/textColorSecondary" />
         </LinearLayout>
 

@@ -40,15 +40,10 @@ public class MainActivity extends BaseActivity {
     private static final String PREF_NAME = "MyTravelPrefs";
     private static final String KEY_NAME = "name";
     private static final String KEY_EMAIL = "email";
-    
-    private static final String THEME_PREFS = "ThemePrefs";
-    private static final String KEY_IS_DARK_MODE = "isDarkMode";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        applySavedTheme();
         
         setContentView(R.layout.activity_main);
 
@@ -224,32 +219,6 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("deprecation")
-    private void toggleTheme() {
-        SharedPreferences prefs = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(KEY_IS_DARK_MODE, !isDarkMode);
-        editor.apply();
-        
-        recreate();
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.fade_in, R.anim.fade_out);
-        } else {
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        }
-    }
-
-    private void applySavedTheme() {
-        SharedPreferences prefs = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
     }
 
     private void saveTicket(String dest, String date, String tClass, String services) {

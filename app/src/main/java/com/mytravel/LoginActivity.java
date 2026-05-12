@@ -19,15 +19,10 @@ public class LoginActivity extends BaseActivity {
     private EditText etUsername, etPassword;
     private SharedPreferences userPrefs;
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
-    private static final String PREFS_NAME = "ThemePrefs";
-    private static final String KEY_IS_DARK_MODE = "isDarkMode";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Apply saved theme
-        applySavedTheme();
 
         // Session Management: Check if already logged in
         userPrefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
@@ -95,7 +90,7 @@ public class LoginActivity extends BaseActivity {
         getMenuInflater().inflate(R.menu.auth_menu, menu);
         MenuItem themeItem = menu.findItem(R.id.action_theme);
         if (themeItem != null) {
-            SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+            SharedPreferences prefs = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
             boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
             themeItem.setIcon(isDarkMode ? R.drawable.ic_moon : R.drawable.ic_sun);
         }
@@ -109,24 +104,5 @@ public class LoginActivity extends BaseActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void toggleTheme() {
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(KEY_IS_DARK_MODE, !isDarkMode);
-        editor.apply();
-        recreate();
-    }
-
-    private void applySavedTheme() {
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
     }
 }

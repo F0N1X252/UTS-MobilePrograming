@@ -16,15 +16,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DashboardActivity extends BaseActivity {
 
-    private static final String PREFS_NAME = "ThemePrefs";
-    private static final String KEY_IS_DARK_MODE = "isDarkMode";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        // Apply saved theme before setting content view
-        applySavedTheme();
         
         setContentView(R.layout.activity_dashboard);
 
@@ -63,33 +57,6 @@ public class DashboardActivity extends BaseActivity {
         });
     }
 
-    private void applySavedTheme() {
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-    }
-
-    @SuppressWarnings("deprecation")
-    private void toggleTheme() {
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        boolean isDarkMode = prefs.getBoolean(KEY_IS_DARK_MODE, false);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(KEY_IS_DARK_MODE, !isDarkMode);
-        editor.apply();
-        
-        // Smoother transition
-        recreate();
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, R.anim.fade_in, R.anim.fade_out);
-        } else {
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        }
-    }
-
     private boolean loadFragment(Fragment fragment, String title) {
         if (fragment != null) {
             if (getSupportActionBar() != null) {
@@ -112,33 +79,11 @@ public class DashboardActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.action_logout) {
-            showLogoutConfirmation();
-            return true;
-        } else if (itemId == R.id.action_theme) {
-            toggleTheme();
-            return true;
-        } else if (itemId == R.id.action_profile) {
-            startActivity(new Intent(this, ProfileActivity.class));
-            return true;
-        } else if (itemId == R.id.action_language) {
-            showLanguageDialog();
+        if (item.getItemId() == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void showLanguageDialog() {
-        String[] languages = {"English", "Indonesian"};
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.menu_language)
-                .setItems(languages, (dialog, which) -> {
-                    String lang = (which == 0) ? "en" : "in";
-                    LocaleHelper.setLocale(this, lang);
-                    recreate(); // Restart to apply language
-                })
-                .show();
     }
 
     private void logout() {
@@ -151,14 +96,5 @@ public class DashboardActivity extends BaseActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
-    }
-
-    private void showLogoutConfirmation() {
-        new AlertDialog.Builder(this)
-                .setTitle("Logout")
-                .setMessage("Are you sure you want to logout?")
-                .setPositiveButton("Yes", (dialog, which) -> logout())
-                .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
-                .show();
     }
 }

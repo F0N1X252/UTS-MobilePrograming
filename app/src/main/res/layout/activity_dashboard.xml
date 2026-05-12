@@ -37,7 +37,6 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/booking_fab_desc"
         app:srcCompat="@android:drawable/ic_input_add"
-        app:layout_anchor="@id/bottom_app_bar"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+        app:layout_anchor="@id/bottom_app_bar" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

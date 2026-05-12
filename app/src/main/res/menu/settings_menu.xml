@@ -5,23 +5,5 @@
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_gear"
         android:title="@string/menu_settings"
-        app:showAsAction="always">
-        <menu>
-            <item
-                android:id="@+id/action_profile"
-                android:icon="@drawable/ic_user"
-                android:title="@string/menu_profile" />
-            <item
-                android:id="@+id/action_language"
-                android:icon="@android:drawable/ic_menu_sort_alphabetically"
-                android:title="@string/menu_language" />
-            <item
-                android:id="@+id/action_theme"
-                android:title="@string/menu_theme" />
-            <item
-                android:id="@+id/action_logout"
-                android:icon="@android:drawable/ic_lock_power_off"
-                android:title="@string/logout" />
-        </menu>
-    </item>
+        app:showAsAction="always" />
 </menu>
